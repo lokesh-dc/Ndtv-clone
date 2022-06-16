@@ -152,7 +152,7 @@
 }
 .image>img{
     border-radius: 8px;
-    height: 130px;
+    width:100%;
 }
  .innertext{
 margin-top: 20px;
