@@ -6,8 +6,8 @@
     box-sizing: border-box;
 }
 :root{
-    --darkColor: #3e3e3e;
-    --lightColor: #c6c6c6;
+    --darkColor: white;
+    --lightColor: black;
 }
 
 
@@ -27,6 +27,7 @@
    
 
 }
+
 #navbar>div:first-child{
     width:60%;
     
@@ -41,7 +42,7 @@
 }
 
 #navbar>div>a{
-    color:white;
+    color: black;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
@@ -62,7 +63,7 @@
 }
 
 #navbar>div:first-child>a:hover{
-    background-color: black
+    background-color:gray;
 }
 
 #navbar>div:last-child>a:hover{
@@ -93,7 +94,10 @@
     
 }
 .top>p{
-            color: rgb(185,203,217);
+    color: rgb(185,203,217);
+    margin-top: 15px;
+    margin-bottom: 15px;
+        
     }
 .top>p+h2{
     font-family: var(--ff-one);
@@ -101,8 +105,7 @@
     font-weight: 900;
     line-height: 47px;
     margin: -12px 0px 16px;
-
-    }
+   }
     
 #container{
     
