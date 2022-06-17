@@ -85,6 +85,7 @@ body{
     font-weight: 700;
     height: 40px;
     padding:0 40px 0 40px;
+    letter-spacing: 2px;
     display: flex;
     align-items: center;
     border:1px solid black;
@@ -114,9 +115,10 @@ body{
     grid-template-columns: 1fr 1fr;
     gap: 10px;
 }
+
 #container>div>div{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding:0 0 10px 0 ;
+    padding:10px 0 20px 0 ;
     border-radius: 10px;
 }
 #leftContent>h1{
@@ -174,7 +176,7 @@ body{
 }
 #container>div>div>div{
     display: flex;
-    padding: 10px 10px;
+    padding: 10px 15px;
     justify-content: space-between;
     text-transform: uppercase;
     letter-spacing: 2px;

@@ -9,7 +9,7 @@ window.addEventListener("load",function (){
 function displayNews(articles){
     
     articles.forEach(function(elem,index) {
-        if(index<34){
+        if(index<40){
         let div = document.createElement("div");
         let heading = document.createElement("p");
         heading.innerText = elem.headline;
@@ -21,9 +21,14 @@ function displayNews(articles){
         let btn = document.createElement("button");
         let type= document.createElement("p");
         type.innerText = elem.category;
-        btn.innerText = "Add to Read Later"
-        innerDiv.append(type,btn)
+        btn.innerText = "Read Later"
+        innerDiv.append(type,btn);
+
         div.append(innerDiv,img,heading);
+
+        div.addEventListener("click",function(){
+            readArticle(elem);
+        })
         btn.addEventListener("click",function(){
             readLater(elem);
         })
@@ -51,9 +56,12 @@ function displayLatest(articles){
         let btn = document.createElement("button");
         let type= document.createElement("p");
         type.innerText = elem.category;
-        btn.innerText = "Add to Read Later"
+        btn.innerText = "Read Later"
         innerDiv.append(type,btn)
         div.append(innerDiv,img,heading);
+        div.addEventListener("click",function(){
+            readArticle(elem);
+        })
         btn.addEventListener("click",function(){
             readLater(elem);
         })
@@ -83,9 +91,12 @@ function displayRight(articles){
         let btn = document.createElement("button");
         let type= document.createElement("p");
         type.innerText = elem.category;
-        btn.innerText = "Add to Read Later"
+        btn.innerText = "Read Later"
         innerDiv.append(type,btn)
         div.append(innerDiv,img,heading);
+        div.addEventListener("click",function(){
+            readArticle(elem);
+        })
         btn.addEventListener("click",function(){
             readLater(elem);
         })
@@ -100,4 +111,9 @@ let redLaterData = JSON.parse(localStorage.getItem("readLaterArticles")) || [];
 function readLater(elem){
     redLaterData.push(elem);
     localStorage.setItem("readLaterArticles",JSON.stringify(redLaterData));
+}
+
+function readArticle(elem){
+    localStorage.setItem("readThisArticle",JSON.stringify(elem));
+    window.location.href = "articlePage.html"
 }
