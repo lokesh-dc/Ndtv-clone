@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Montserrat:wght@100&family=Roboto+Flex:opsz,wght@8..144,200&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <title>LifeStyle</title>
+
+    <style>
+
+  
+
+    :root{
+    --darkColor: white;
+    --lightColor: black;
+}
+
+
+#navbar{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    background-color: var(--darkColor);
+    position: sticky;
+    top:0;
+    width: 99vw;
+    padding:0;
+    margin:0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    z-index: 9999;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    
+  
+}
+
+#navbar>div:first-child{
+    width:60%;
+    
+    
+}
+#navbar>div{
+    width: 70%;
+    margin:auto;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+#navbar>div>a{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    padding:3px 9px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+#navbar>div:first-child>a{
+    font-size: 9px;
+    color: var(--lightColor)
+}
+
+#navbar>div:last-child>a{
+    padding: 0 0;
+    margin:0 12px;
+}
+
+#navbar>div:first-child>a:hover{
+    background-color:gray;
+}
+
+#navbar>div:last-child>a:hover{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+#navbar>div>a>img{
+    width:99px;
+    height:18px;
+}
+
+
+
+
+      .container {
+        width: 95%;
+        margin: auto;
+      }
+
+      #box {
+        height: 60px;
+        width: 100%;
+        margin: auto;
+        background: rgb(145, 191, 29);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: aliceblue;
+        font-weight: bolder;
+      }
+
+      #body {
+        margin: auto;
+        margin-top: 50px;
+
+        width: 100%;
+        gap: 20px;
+        height: max-content;
+        position: relative;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        padding-bottom: 20px;
+      }
+      .cards > div {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .cards > div > h2 {
+        text-align: center;
+        font-family: "Dosis", sans-serif;
+        font-family: "Montserrat", sans-serif;
+        font-family: "Roboto", sans-serif;
+        font-family: "Roboto Flex", sans-serif;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      #body2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(400px);
+        margin: auto;
+        margin-top: 50px;
+        width: 100%;
+        gap: 30px;
+      }
+
+      #body2 > div > h2 {
+        text-align: center;
+        font-family: "Dosis", sans-serif;
+        font-family: "Montserrat", sans-serif;
+        font-family: "Roboto", sans-serif;
+        font-family: "Roboto Flex", sans-serif;
+      }
+      #body2 > div > h2 + img {
+        width: 100%;
+        height: 400px;
+      }
+      img + h2 {
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 1.25;
+      }
+
+      .icon-circle-left,
+      .icon-circle-right {
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        cursor: pointer;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        z-index: 9999;
+        color: rgb(153, 153, 153);
+      }
+      .icon-circle-left {
+        left: -15px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      .icon-circle-right {
+        right: -15px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      .icon-circle-left:hover,
+      .icon-circle-right:hover {
+        background-color: aqua;
+      }
+
+      #upperBox {
+        width: 100%;
+        margin: auto;
+        height: 500px;
+
+        margin-bottom: 30px;
+        position: relative;
+        display: flex;
+      }
+
+      .circle-left,
+      .circle-right {
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        cursor: pointer;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        font-size: 25px;
+        z-index: 9999;
+        border: 0px;
+      }
+
+      .circle-left {
+        /* left: -69%; */
+        left: -15px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      .circle-right {
+        /* right: -69%; */
+        right: -15px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      .circle-left:hover,
+      .circle-right:hover {
+        background-color: transparent
+      }
+      #upperBox > div {
+        width: 100%;
+      }
+      #upperBox > div > img {
+        width: 100%;
+        object-fit: cover;
+        height: 500px;
+      }
+
+      .upperBoxContainer {
+        position: relative;
+        width: 70%;
+        margin: auto;
+      }
+
+      #upperBox > div > img + h2 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+
+        bottom: 150px;
+        color: rgb(241, 120, 0);
+        font-weight: bold;
+      }
+      h2 + h1 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+
+        bottom: 50px;
+        color: aliceblue;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <div>
+          <a href="">NDTV</a>
+          <a href="">Hindi News</a>
+          <a href="">Bussiness</a>
+          <a href="">Movies</a>
+          <a href="">Cricket</a>
+          <a href="">Tech</a>
+          <a href="">Food</a>
+          <a href="">Crypto</a>
+          <a href="">Web Stories</a>
+          <a href="">Education</a>
+          <a href="">Auto</a>
+          <a href="">Swasth</a>
+          <a href="">Lifestyle</a>
+          <a href="">Health</a>
+          <a href="">Shopping</a>
+          <a href="">Art</a>
+      </div>
+      <div>
+          <a href=""><img src="https://drop.ndtv.com/homepage/images/ndtvlogo23march.png" alt="NDTV"></a>
+          <a href="">Live tv</a>
+          <a href="">latest</a>
+          <a href="">covid</a>
+          <a href="">india</a>
+          <a href="">opinion</a>
+          <a href="">video</a>
+          <a href="">cities</a>
+          <a href="world.html">world</a>
+          <a href="">offbeat</a>
+          <a href="">trends</a>
+          <a href="">photos</a>
+      </div>
+  </div>
+
+
+
+    <div class="upperBoxContainer">
+      <div id="upperBox"></div>
+      <div>
+        <button class="circle-left"><</button>
+        <button class="circle-right">></button>
+      </div>
+    </div>
+    <div class="container">
+      <div id="box">
+        <h2 style="margin-left: 20px">STORIES</h2>
+      </div>
+
+      <div id="body">
+        <span class="material-icons icon-circle-left"> arrow_back_ios </span>
+        <span class="material-icons icon-circle-right">
+          arrow_forward_ios
+        </span>
+        <div class="cards"></div>
+      </div>
+
+      <div id="body2">
+        <div>
+          <h2 style="color: rgb(243, 120, 0); font-weight: bold">FASHION</h2>
+
+          <img
+            src="https://c.ndtvimg.com/2022-06/3gdtg7v_sanya-malhotra_295x200_14_June_22.jpg"
+          />
+          <h2>Sanya Malhotra In A Breezy Floral Dress Looks Summer Perfect</h2>
+        </div>
+        <div>
+          <h2 style="color: rgb(189, 16, 224); font-weight: bold">BEAUTY</h2>
+
+          <img
+            src="https://c.ndtvimg.com/2022-06/8t1caf58_facial-tools_295x200_14_June_22.jpg"
+          />
+          <h2>5 Tools To De-Puff Your Face Easily At Home</h2>
+        </div>
+        <div>
+          <h2 style="color: rgb(244, 188, 19); font-weight: bold">
+            SEX & RELATIONSHIPS
+          </h2>
+          <img
+            src="https://c.ndtvimg.com/2022-06/43kfuej_gifts345_295x200_14_June_22.jpg"
+          />
+          <h2>
+            Father's Day 2022: Here's Your Perfect Gifting Guide To Pamper Your
+            Dad
+          </h2>
+        </div>
+        <div>
+          <h2 style="color: rgb(244, 188, 19); font-weight: bold">
+            WORK & MONEY
+          </h2>
+          <img
+            src="https://c.ndtvimg.com/2022-05/pjp10s2o_car-air-purifier_295x200_31_May_22.jpg"
+          />
+          <h2>
+            7 Best Car Air Fresheners To Make Your Vehicle Smell Good At All
+            Times
+          </h2>
+        </div>
+
+        <div>
+          <h2 style="color: rgb(244, 188, 19); font-weight: bold">
+            MOTHERHOOD & BABY CARE
+          </h2>
+          <img
+            src="https://c.ndtvimg.com/2022-06/0lvfto3g_baby-products-_295x200_14_June_22.jpg"
+          />
+          <h2>Here Are 8 Newborn Essentials You Need For Your Baby</h2>
+        </div>
+
+        <div>
+          <h2 style="color: rgb(244, 188, 19); font-weight: bold">TRAVEL</h2>
+          <img
+            src="https://c.ndtvimg.com/2022-06/tn4s6bv_orchha-_295x200_14_June_22.jpg"
+          />
+          <h2>Top 5 Things To Do In Orchha, A Beautiful Monsoon Destination</h2>
+        </div>
+        <div>
+          <h2 style="color: rgb(241, 120, 0); font-weight: bold">
+            KITCHEN & DINING
+          </h2>
+          <img
+            src="https://c.ndtvimg.com/2022-06/f4j5fdt_worldginday2_295x200_10_June_22.jpg"
+          />
+          <h2>
+            Let The Fun Be-Gin With These 7 Cocktails For World Gin Day 2022
+          </h2>
+        </div>
+        <div>
+          <h2 style="color: rgb(189, 16, 224); font-weight: bold">WELLNESS</h2>
+          <img
+            src="https://c.ndtvimg.com/2022-06/iqdd28qg_brain-foods_295x200_14_June_22.jpg"
+          />
+          <h2>
+            Include These 6 Foods To Pave Way For Better Memory And Brain Health
+          </h2>
+        </div>
+        <div>
+          <h2 style="color: rgb(244, 188, 19); font-weight: bold">
+            HOME & DECOR
+          </h2>
+          <img
+            src="https://c.ndtvimg.com/2022-06/6h15sn9g_scented-candles_295x200_10_June_22.jpg"
+          />
+          <h2>
+            The Summer Candles You Need To Get This Season So Freshen Up Your
+            Home
+          </h2>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="scripts/lifestyle.js"></script>
