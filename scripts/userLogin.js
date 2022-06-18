@@ -8,12 +8,12 @@
     let userData = JSON.parse(localStorage.getItem("userDetails")) || [];
 
     document.querySelector("#person1").addEventListener("click",function(){
-        alert("you are successfully logged in");
+        alert("Hi Person-1, you are successfully logged in");
         localStorage.setItem("loginId","1");
         window.location.href = "index.html";
     })
     document.querySelector("#person2").addEventListener("click",function(){
-        alert("you are successfully logged in");
+        alert("Hi Person-2, you are successfully logged in");
         localStorage.setItem("loginId","1");
         window.location.href = "index.html";
     })

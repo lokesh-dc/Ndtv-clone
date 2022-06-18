@@ -103,38 +103,47 @@ let data = [
 
   {
     img: "https://c.ndtvimg.com/2022-06/1kr7j0l8_tiger-siblings_625x300_14_June_22.jpg",
-    headline:
-      "Watch: Tiger Siblings Playing In The Wild Win Over Internet",
+    headline: "Watch: Tiger Siblings Playing In The Wild Win Over Internet",
     p1: "Edited by Ujjawal Prakash | Tuesday June 14, 2022",
     p2: "At MP Tiger Foundation, two tigers were seen in a playful mood. The video of these tiger siblings, which was shared by Indian Forest Service officer Susanta Nanda, has now gone viral.",
     path: "https://www.ndtv.com/offbeat/video-of-playful-tiger-siblings-wins-over-the-internet-3065101",
-  }
+  },
 ];
 
-data.forEach(function (el) {
+function readArticle(elem) {
+  localStorage.setItem("readThisArticle", JSON.stringify(elem));
+  window.location.href = "articlePage.html";
+}
+
+data.forEach(function (elem) {
   let div = document.createElement("div");
   div.addEventListener("click", function () {
-    window.location.href = el?.path;
+    let dataObj = {
+      category: "Offbeat",
+      description: `${elem.p1} ${elem.p2}`,
+      headline: `${elem.headline}`,
+      imageUrl: elem.img,
+      postedDate: new Date().toISOString().slice(0, 10),
+    };
+    readArticle(dataObj);
   });
   let div1 = document.createElement("div");
   let img = document.createElement("img");
-  img.setAttribute("src", el.img);
+  img.setAttribute("src", elem.img);
   let div2 = document.createElement("div");
   let h3 = document.createElement("h3");
-  h3.innerText = el.headline;
+  h3.innerText = elem.headline;
   let p1 = document.createElement("p");
-  p1.innerText = el.p1;
+  p1.innerText = elem.p1;
   let p2 = document.createElement("p");
-  p2.innerText = el.p2;
-  let but = document.createElement("button")
-  but.innerText = "Add to Read Later"
+  p2.innerText = elem.p2;
 
   div1.setAttribute("class", "image");
   div2.setAttribute("class", "innertext");
   document.querySelector("#box2").append(div);
   div.append(div1, div2);
   div1.append(img);
-  div2.append(h3, p1, p2,but);
+  div2.append(h3, p1, p2);
 });
 
 let data2 = [
@@ -176,18 +185,24 @@ let data2 = [
   },
 ];
 
-data2.forEach(function (el) {
+data2.forEach(function (elem) {
   let div = document.createElement("div");
   div.addEventListener("click", function () {
-    window.location.href = el.path;
+    let dataObj = {
+      category: "Offbeat",
+      description: `${elem.p}`,
+      headline: `${elem.p}`,
+      imageUrl: elem.img,
+      postedDate: new Date().toISOString().slice(0, 10),
+    };
+    readArticle(dataObj);
   });
   let img = document.createElement("img");
-  img.setAttribute("src", el.img);
+  img.setAttribute("src", elem.img);
 
   let p = document.createElement("p");
-  p.innerText = el.p;
-  let but = document.createElement("button")
-  but.innerText = "Add to Read Later"
+  p.innerText = elem.p;
+ 
 
   div.append(img, p);
   document.querySelector("#box1").append(div);
@@ -249,9 +264,8 @@ data3.forEach(function (el) {
   img.setAttribute("src", el.img);
   let h4 = document.createElement("h4");
   h4.innerText = el.text;
-  let but = document.createElement("button")
-  but.innerText = "Add to Read Later"
-  div.append(img, h4,but);
+
+  div.append(img, h4);
   document.querySelector("#box3").append(div);
 
   div.setAttribute("class", "innerBox");

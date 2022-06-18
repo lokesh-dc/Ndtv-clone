@@ -59,13 +59,12 @@ function displayLatest(articles){
         btn.innerText = "Read Later"
         innerDiv.append(type,btn)
         div.append(innerDiv,img,heading);
-        div.addEventListener("click",function(){
-            readArticle(elem);
-        })
         btn.addEventListener("click",function(){
             readLater(elem);
         })
-
+        heading.addEventListener("click",function(){
+            readArticle(elem);
+        })
         document.querySelector("#leftContent").appendChild(div);
     }
     })
