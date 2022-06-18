@@ -9,6 +9,7 @@ document.getElementById('btn').addEventListener('click',function(){
     if(count>=total){
         count=0;
     }
+    
     // imgslider.scrollTo(count,0)
     imgslider.scrollTo({
         top:0,
