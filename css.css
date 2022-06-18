@@ -1,0 +1,145 @@
+        #container{
+            width: 80%;
+            display: flex;
+            /* //border: 2px solid red; */
+            padding: 10px;
+            overflow: auto;
+            position: relative;
+            justify-content: space-around;
+        }
+        #container > div{
+            /* width: 250px; */
+            min-width: 219px;
+            margin-left: 20px;
+            padding: 4px 14px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+          
+        }
+        .card{
+            width: 250px;
+        }
+        #container  .img img{
+            width: 100%;
+    
+            /* background-image: url('https://c.ndtvimg.com/2022-06/oddbqph_eshasarees3_625x300_08_June_22.jpg');
+            
+    height: 366px;
+    /* background-position: 100%; */
+    /* background-size: cover;
+    background-repeat: no-repeat;
+    /* background: fixed; */
+    /* background-position: inherit;  */ 
+
+        }
+        #container>img+p{
+            margin-left: 20px;
+        }
+        #kuch{
+            display: flex;
+            /* border: 2px solid red; */
+            justify-content: space-between;
+            align-items: center;
+        }
+        /* #kuch>p{
+            border: 2px solid darkgreen;
+        } */
+        #kuch>img{
+                width: 30%;
+                /* border: 2px solid green; */
+                height: 30px;
+              
+        }
+        #container::-webkit-scrollbar { display: none; }
+         button{
+            position:absolute;
+            width: 0px;
+            height: 0px;
+            /* display: none; */
+            padding:0px;
+            border: none;
+            
+        }
+
+        .btn1::before{
+            font-family: unset;
+            font-size: 36px;
+            content: "\2039";
+            color: #202124;
+            background-color: #fff;
+            border-radius: 50%;
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            text-align: center;
+        }
+        .btn2::before{
+            font-family: unset;
+            font-size: 36px;
+            content: "\203A";
+            color: #202124;
+            background-color: #fff;
+            border-radius: 50%;
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            text-align: center;
+        }
+        .btn1{
+            top: 50%;
+            left: 2%;
+        }
+        .btn2{
+            top:50%;
+            right: 4%;
+        }
+        #niche{
+          display: flex;
+          width :50%;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+        }
+
+    #jii{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        width: 50%;
+        gap:10px
+    }
+    #hnjii{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        width: 50%;
+        gap:10px;
+        margin-top: 20px;
+    }
+    #bas{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        width: 50%;
+        gap:10px;
+        margin-top: 20px;
+    }
+    #haan{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 50%;
+        gap:10px;
+        margin-top: 20px;
+    }
+    #movie{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 50%;
+        gap:10px;
+        margin-top: 20px;
+    }#arey{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        width: 50%;
+        gap:10px;
+        margin-top: 20px;
+        
+    }
+
+    
