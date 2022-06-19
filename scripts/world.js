@@ -129,6 +129,8 @@ data.forEach(function (elem) {
     };
     readArticle(newData);
   });
+
+  
   let div1 = document.createElement("div");
   let img = document.createElement("img");
   img.setAttribute("src", elem.img);

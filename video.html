@@ -4,54 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NDTV | Live TV</title>
-    <link rel="stylesheet" href="Css/commonStyles.css">
-    <style>
-        #navbar{
-            background-color: white;
-        }
-        #navbar>div:last-child>a{
-            color: black;
-        }
-        #live{
-            width:100%;
-            height:70vh;
-            text-align: center;
-        }
-        #live>video{
-            height:100%;
-            padding: 20px;
-            border: 1px solid grey;
-            background-color: grey;
-        }
-        h1{
-            text-align: center;
-            font-size: 40px;
-            letter-spacing: 2px;
-            margin: 0;
-        }
-        h2{
-            margin-top: 10px;
-            text-align: center;
-            font-weight: 300;
-        }
-        body>img{
-            width:200px;
-            margin-left: 400px;
-        }
-        #live>div>img{
-            width:20%;
-            background-color: rgba(255, 255, 255, 0.368);
-            border-radius: 50%;
-            cursor: pointer;
-        }
-        #live>div {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, 0%);
-        }
-    </style>
+    <title>NDTV</title>
+    <link rel="stylesheet" href="css/video.css">
 </head>
 <body>
     <div id="navbar">
@@ -90,13 +44,15 @@
             <a href="readLater.html">read later</a>
         </div>
     </div>
-    <h1>LIVE TV</h1>
-    <h2> Headline: As 'Agnipath' Protests Spread, Centre Announces More Concessions</h2>
-    <div id="live">
-        <video>
-            <source src="https://voddownload.ndtv.com/mp4/65x319_1432323.mp4">
-        </video>
-        <div><img src="https://cdn-icons.flaticon.com/png/512/3024/premium/3024584.png?token=exp=1655548499~hmac=e3e6370850027b843ce1546aafcf13d3" alt=""></div>
+    <h1>VIDEO</h1>
+    <div id="container">
+        <div id="mainContent">
+
+        </div>
+
     </div>
+
 </body>
+
+<script type="module" src="scripts/video.js"></script>
 </html>
