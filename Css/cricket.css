@@ -11,70 +11,12 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-#navbar{
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    background-color: white;
-    position: sticky;
-    top:0;
-    width: 99vw;
-    padding:0;
-    margin:0;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 40px;
-
-}
-#navbar>div:first-child{
-    width:60%;
-}
-#navbar>div{
-    width: 70%;
-    margin:auto;
-    display: flex;
-    justify-content: space-around;
-}
-
-#navbar>div>a{
-    color:black;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 13px;
-    padding:3px 9px;
-    border-radius: 4px;
-    letter-spacing: 1px;
-}
-
-#navbar>div:first-child>a{
-    font-size: 9px;
-    color: var(--lightColor)
-}
-
-#navbar>div:last-child>a{
-    padding: 0 0;
-    margin:0 12px;
-}
-
-#navbar>div:first-child>a:hover{
-    background-color: black;
-}
-
-#navbar>div:last-child>a:hover{
-    text-decoration: underline;
-    text-underline-offset: 5px;
-}
-
-#navbar>div>a>img{
-    width:99px;
-    height:18px;
-}
 /* BODY */
 body>h1{
     color:grey;
-    font-size: 8em;
-    text-align: center;
+    font-size: 5em;
+    margin:20px;
+    margin-left:100px;
 }
 #container{
     width:80%;
@@ -138,12 +80,16 @@ button:hover{
     border-right: 2px solid red;
     padding: 2px 10px;
     margin:auto 0;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 700;
     letter-spacing: 2px;
 }
 
 #mainContent>div>div:last-child>div>p:first-child{
     font-weight: 700;
-    font-size: 16px;
+    font-size: 1em;
+}
+
+#mainContent>div>div:last-child>div>p+p{
+    font-size: 1em;
 }

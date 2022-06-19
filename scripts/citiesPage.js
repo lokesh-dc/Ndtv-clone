@@ -2,7 +2,8 @@ import {data,data2,data3} from '/scripts/arrObjData.js';
 displaymidNews(data)
 
 function displaymidNews(data) {
-  data.forEach(function (elem) {
+  data.forEach(function (elem,index) {
+    if(index<30){
     let div = document.createElement("div");
 
     let div1 = document.createElement("div");
@@ -35,6 +36,7 @@ function displaymidNews(data) {
     div.append(div1, div2);
     div1.append(img);
     div2.append(h2, p1, p2, btn);
+}
   });
 }
 
@@ -42,7 +44,8 @@ function displaymidNews(data) {
 displayTreadingNews(data2)
 
 function displayTreadingNews(data2) {
-  data2.forEach(function (elem) {
+  data2.forEach(function (elem,index) {
+    if(index<40){
     let div = document.createElement("div");
 
     let img = document.createElement("img");
@@ -54,6 +57,7 @@ function displayTreadingNews(data2) {
     div.append(img, p);
     document.querySelector("#treadingNews").append(div);
     div.setAttribute("class", "inner");
+  }
   });
 
 }
@@ -62,7 +66,8 @@ function displayTreadingNews(data2) {
 
 displayRightFun(data3)
 function displayRightFun(data3) {
-  data3.forEach(function (el) {
+  data3.forEach(function (el,index) {
+    if(index<30){
     let div = document.createElement("div");
     // div.addEventListener("click", function () {
     //   window.location.href = el.path;
@@ -75,6 +80,7 @@ function displayRightFun(data3) {
     document.querySelector("#rightSideNews").append(div);
 
     div.setAttribute("class", "innerBox");
+    }
   });
 }
 

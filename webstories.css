@@ -1,5 +1,6 @@
         #container{
             width: 80%;
+            margin:auto;
             display: flex;
             /* //border: 2px solid red; */
             padding: 10px;
@@ -16,11 +17,16 @@
 
           
         }
+        h1{
+            text-align: center;
+            
+        }
         .card{
             width: 250px;
         }
         #container  .img img{
             width: 100%;
+            z-index:-2;
     
             /* background-image: url('https://c.ndtvimg.com/2022-06/oddbqph_eshasarees3_625x300_08_June_22.jpg');
             
