@@ -59,7 +59,9 @@ body{
     #container>div>p{
         font-size:16px;
     }
-
+    a{
+        text-decoration: none;
+    }
     #container>div:last-child{
         text-align: center;
         margin-left:60px;

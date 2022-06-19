@@ -6,17 +6,6 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-#navbar{
-    background-color: white;
-}
-#navbar>div>a{
-    color:black;
-}
-
-#navbar>a>img{
-    width:100%;
-}
-
 body>p{
     margin-left:10%;
     font-size: 20px;

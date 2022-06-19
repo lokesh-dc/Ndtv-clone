@@ -16,6 +16,7 @@ body{
     flex-direction: column;
     row-gap: 20px;
     background-color: var(--darkColor);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     position: sticky;
     top:0;
     width: 99vw;
@@ -27,10 +28,10 @@ body{
 
 }
 #navbar>div:first-child{
-    width:60%;
+    width:80%;
 }
 #navbar>div{
-    width: 70%;
+    width: 90%;
     margin:auto;
     display: flex;
     justify-content: space-around;
@@ -41,14 +42,14 @@ body{
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 0.7em;
     padding:3px 9px;
     border-radius: 4px;
     letter-spacing: 1px;
 }
 
 #navbar>div:first-child>a{
-    font-size: 9px;
+    font-size: 0.6em;
     color: var(--lightColor)
 }
 
