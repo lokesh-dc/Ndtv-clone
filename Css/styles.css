@@ -82,35 +82,20 @@ body{
 #flashNews>div{
     font-weight: 700;
     height: 40px;
-    padding:10px 40px 10px 40px;
+    padding:0 40px 0 40px;
     letter-spacing: 2px;
     display: flex;
     align-items: center;
     border:1px solid black;
-    height:auto;
-    font-size: 16px;
 }
 
 #flashNews>div:first-child{
-    font-size: 1em;
-    background-color: black;
-    color: white;
+    background-color: yellow;
 }
 
 #flashNews>div:last-child{
-    background-color: yellow;
-    color: black;
-    width:900px;   
-}
-#flashNews>div:last-child{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-#flashNews>div:last-child>div>img{
-    width: 20px;
-    cursor:pointer;
-    
+    background-color: black;
+    color: white;
 }
 /* body */
 #container{

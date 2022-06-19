@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700&display=swap');    
+
+:root{
+    --darkColor: #3e3e3e;
+    --lightColor: #c6c6c6;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#navbar{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    background-color: var(--darkColor);
+    position: sticky;
+    top:0;
+    width: 99vw;
+    padding:0;
+    margin:0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+
+}
+#navbar>div:first-child{
+    width:60%;
+}
+#navbar>div{
+    width: 70%;
+    margin:auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+#navbar>div>a{
+    color:white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    padding:3px 9px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+#navbar>div:first-child>a{
+    font-size: 9px;
+    color: var(--lightColor)
+}
+
+#navbar>div:last-child>a{
+    padding: 0 0;
+    margin:0 12px;
+}
+
+#navbar>div:first-child>a:hover{
+    background-color: black;
+}
+
+#navbar>div:last-child>a:hover{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+#navbar>div>a>img{
+    width:99px;
+    height:18px;
+}
