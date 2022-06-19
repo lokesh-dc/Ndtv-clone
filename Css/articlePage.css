@@ -5,21 +5,16 @@ body{
     padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
-
-#navbar{
-    background-color: rgba(128, 128, 128)
-}
-#navbar>div>a{
-    color:black;
-}
-
-#navbar>a>img{
-    wisth:100%;
-}
-
 body>p{
     margin-left:10%;
     font-size: 20px;
+}
+#navbar{
+    background-color: white;
+}
+
+#navbar>div:last-child>a{
+    color: black;
 }
 #content{
     width:80%;

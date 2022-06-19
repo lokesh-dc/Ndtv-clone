@@ -1,5 +1,5 @@
 import {articles} from './test.js';
-
+ 
 window.addEventListener("load",function (){
     displayNews(articles); // main column
     displayLatest(articles); //left column
@@ -7,16 +7,21 @@ window.addEventListener("load",function (){
 })
 
 function displayNews(articles){
+    
     articles.forEach(function(elem,index) {
-        if(index<50){
+        if(index<40){
         let div = document.createElement("div");
         let firstdiv = document.createElement("div");
+        let newsdiv = document.createElement("div");
         let heading = document.createElement("p");
         heading.innerText = elem.headline
+        let desc = document.createElement("p");
+        desc.innerText = elem.description;
+        newsdiv.append(heading,desc)
         let img = document.createElement("img");
         img.setAttribute("src",elem.imageUrl);
         img.setAttribute("loading","lazy")
-       firstdiv.append(img,heading);
+       firstdiv.append(img,newsdiv);
         let innerDiv = document.createElement("div");
         let btn = document.createElement("button");
         let type= document.createElement("p");
@@ -75,7 +80,7 @@ function displayLatest(articles){
 function displayRight(articles){
 
     let filtered  = articles.filter(function(elem){
-        return elem.category === "football" || elem.category === "cricket" || elem.category === "tennis";
+        return elem.category === "tennis";
     }); 
 
     filtered.forEach(function(elem,index){
@@ -113,7 +118,7 @@ let redLaterData = JSON.parse(localStorage.getItem("readLaterArticles")) || [];
 function readLater(elem){
     redLaterData.push(elem);
     localStorage.setItem("readLaterArticles",JSON.stringify(redLaterData));
-    window.alert("Article added to Read Later")
+    alert("Article added to Read Later")
 }
 
 function readArticle(elem){
