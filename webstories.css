@@ -133,7 +133,9 @@
         width: 50%;
         gap:10px;
         margin-top: 20px;
-    }#arey{
+    }
+    
+    #arey{
         display: grid;
         grid-template-columns: repeat(3,1fr);
         width: 50%;

@@ -152,6 +152,7 @@
     margin-top: 40px;
     margin-left: 180px;
 }
+
 #haan{
     display: grid;
     grid-template-columns: repeat(2,1fr);
