@@ -61,6 +61,10 @@
             
         }
 
+
+        ::-webkit-scrollbar{
+            display: none;
+        }
         .btn1::before{
             font-family: unset;
             font-size: 36px;
