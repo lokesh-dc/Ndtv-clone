@@ -8,8 +8,7 @@ document.getElementById('btn').addEventListener('click',function(){
     console.log(count,total)
     if(count>=total){
         count=0;
-    }
-    
+    }   
     // imgslider.scrollTo(count,0)
     imgslider.scrollTo({
         top:0,
