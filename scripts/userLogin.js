@@ -1,9 +1,10 @@
  
-    document.querySelector("#signup").addEventListener("click",function(){
+    document.querySelector("#signup").addEventListener("click",function(event){
         event.preventDefault();
         window.location.href = "userSignup.html"
     })
     document.querySelector("form").addEventListener("submit",signin);
+
     let loginId = JSON.parse(localStorage.getItem("loginId")) || 0 ;
     let userData = JSON.parse(localStorage.getItem("userDetails")) || [];
 
@@ -18,13 +19,13 @@
         window.location.href = "index.html";
     })
     console.log(loginId,userData)
-    function signin(){
+    function signin(event){ 
         event.preventDefault();
         let email = document.querySelector("#email").value;
         let pass = document.querySelector("#pass").value;
 
         
-        if(loginId == 1 && userData.length!=0){
+        if(userData.length>0){
             if(email === ""){
                 let wrong = document.querySelector("#email");
                 wrong.style.borderBottom ="1px solid red";
@@ -33,24 +34,29 @@
                 let wrong = document.querySelector("#pass");
                 wrong.style.borderBottom="thin solid red";
             }
-            else
+            if(email != "" && pass != ""){
+                console.log("helo");
             userData.forEach(function(elem){
-                if(email !== elem.email){
+                if(email != elem.email){
                     let wrong = document.querySelector("#email");
-                    wrong.style.borderBottom="thin solid red";
+                    wrong.style.borderBottom="thin solid blue";
                 }
-                if(pass !== elem.password){
+                if(pass != elem.password){
                     let wrong = document.querySelector("#pass");
-                    wrong.style.borderBottom="thin solid red";
+                    wrong.style.borderBottom="thin solid blue";
                 }
-                else{
+                if(email == elem.email && pass == elem.password){
                     alert("you are successfully logged in");
+                    window.location.href = "index.html";
                 }
             });
             
-        }
-        else{
-            alert("Must Sign up first")
+        }     
+}
+else{
+    alert("Must Sign up first");
+    window.location.href = "usersignup.html";
+
+}
 
     }
-}
