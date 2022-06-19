@@ -1,38 +1,37 @@
 import {articles} from './test.js';
 
 window.addEventListener("load",function (){
-    displayNews(articles);
-    displayLatest(articles);
-    displayRight(articles);
+    displayNews(articles); // main column
+    displayLatest(articles); //left column
+    displayRight(articles); //right column
 })
 
 function displayNews(articles){
-    
     articles.forEach(function(elem,index) {
         if(index<40){
         let div = document.createElement("div");
+        let firstdiv = document.createElement("div");
         let heading = document.createElement("p");
-        heading.innerText = elem.headline;
+        heading.innerText = elem.headline
         let img = document.createElement("img");
         img.setAttribute("src",elem.imageUrl);
         img.setAttribute("loading","lazy")
-       
+       firstdiv.append(img,heading);
         let innerDiv = document.createElement("div");
         let btn = document.createElement("button");
         let type= document.createElement("p");
-        type.innerText = elem.category;
+        var today = new Date;
+        type.innerText = (today.getMonth()+1)+'-'+today.getDate();;
         btn.innerText = "Read Later"
         innerDiv.append(type,btn);
 
-        div.append(innerDiv,img,heading);
-
-        div.addEventListener("click",function(){
-            readArticle(elem);
-        })
+        div.append(innerDiv,firstdiv);
         btn.addEventListener("click",function(){
-            readLater(elem);
+            flag = readLater(elem);
+        });
+            firstdiv.addEventListener("click",function(){
+                readArticle(elem);
         })
-
         document.querySelector("#mainContent").appendChild(div);
     }
     });
@@ -47,22 +46,25 @@ function displayLatest(articles){
     filtered.forEach(function(elem,index){
         if(index<30){
         let div = document.createElement("div");
+        let firstdiv = document.createElement("div");
         let heading = document.createElement("p");
         heading.innerText = elem.headline;
         let img = document.createElement("img");
         img.setAttribute("src",elem.imageUrl);
         img.setAttribute("loading","lazy")
+        firstdiv.append(img,heading);
+
         let innerDiv = document.createElement("div");
         let btn = document.createElement("button");
         let type= document.createElement("p");
         type.innerText = elem.category;
         btn.innerText = "Read Later"
         innerDiv.append(type,btn)
-        div.append(innerDiv,img,heading);
+        div.append(innerDiv,firstdiv);
         btn.addEventListener("click",function(){
             readLater(elem);
         })
-        heading.addEventListener("click",function(){
+        firstdiv.addEventListener("click",function(){
             readArticle(elem);
         })
         document.querySelector("#leftContent").appendChild(div);
@@ -79,21 +81,22 @@ function displayRight(articles){
     filtered.forEach(function(elem,index){
         if(index<30){
         let div = document.createElement("div");
-        let category = document.createElement("h1");
-        category.innerText = elem.category;
+
+        let firstdiv = document.createElement("div");
         let heading = document.createElement("p");
         heading.innerText = elem.headline;
         let img = document.createElement("img");
         img.setAttribute("src",elem.imageUrl);
-        img.setAttribute("loading","lazy");
+        img.setAttribute("loading","lazy")
+        firstdiv.append(img,heading);
         let innerDiv = document.createElement("div");
         let btn = document.createElement("button");
         let type= document.createElement("p");
         type.innerText = elem.category;
         btn.innerText = "Read Later"
         innerDiv.append(type,btn)
-        div.append(innerDiv,img,heading);
-        div.addEventListener("click",function(){
+        div.append(innerDiv,firstdiv);
+        firstdiv.addEventListener("click",function(){
             readArticle(elem);
         })
         btn.addEventListener("click",function(){
@@ -110,6 +113,7 @@ let redLaterData = JSON.parse(localStorage.getItem("readLaterArticles")) || [];
 function readLater(elem){
     redLaterData.push(elem);
     localStorage.setItem("readLaterArticles",JSON.stringify(redLaterData));
+    alert("Article added to Read Later")
 }
 
 function readArticle(elem){

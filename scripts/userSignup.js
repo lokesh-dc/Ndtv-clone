@@ -20,19 +20,17 @@ function signup(event){
         let wrong = document.querySelector("#pass");
         wrong.style.borderBottom="thin solid red";
     }
-    else{
-    
-    let userData = JSON.parse(localStorage.getItem("userDetails")) || [];
-    
-    let obj = {
-        name : name,
-        email : email,
-        password : pass
-    };
+    if(email!="" && pass != "" && name != ""){
+        let userData = JSON.parse(localStorage.getItem("userDetails")) || [];
+        let obj = {
+            name : name,
+            email : email,
+            password : pass
+        };
 
-    userData.push(obj);
-    localStorage.setItem("userDetails",JSON.stringify(userData));
-    alert("You can Sign in now");
-    window.location.href = "userLogin.html";
+        userData.push(obj);
+        localStorage.setItem("userDetails",JSON.stringify(userData));
+        alert("You can Sign in now");
+        window.location.href = "userLogin.html";
 }
-}
+}   
