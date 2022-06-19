@@ -21,8 +21,9 @@ function displayNews(readLaterArticles){
         let innerDiv = document.createElement("div");
         let btn = document.createElement("button");
         let type= document.createElement("p");
-        var today = new Date;
-        type.innerText = (today.getMonth()+1)+'-'+today.getDate();;
+        type.innerText = elem.category;
+        type.style.textTransform = "uppercase";
+        type.style.letterSpacing = "2px";
         btn.innerText = "Mark As Completed"
         innerDiv.append(type,btn);
 
@@ -71,6 +72,10 @@ else{
 }
 }
 
+function readArticle(elem){
+    localStorage.setItem("readThisArticle",JSON.stringify(elem));
+    window.location.href = "articlePage.html";
+}
 
 function Completed(elem,index){
     readLaterArticles.splice(index,1);

@@ -24,10 +24,10 @@ body{
 }
 
 #navbar>div:first-child{
-    width:60%;
+    width:80%;
 }
 #navbar>div{
-    width: 70%;
+    width: 90%;
     margin:auto;
     display: flex;
     justify-content: space-around;

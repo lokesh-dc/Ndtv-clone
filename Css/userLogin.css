@@ -5,6 +5,18 @@ body{
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     }
+    #success{
+        width:50%;
+        margin:auto;
+        height: 500px;
+        text-align: center;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 10px;
+        padding:20px 0px;
+    }
+    #success>h1{
+        margin-top:200px;
+    }
     #container{
         width:60%;
         margin: auto;
@@ -47,7 +59,9 @@ body{
     #container>div>p{
         font-size:16px;
     }
-
+    a{
+        text-decoration: none;
+    }
     #container>div:last-child{
         text-align: center;
         margin-left:60px;
@@ -88,6 +102,10 @@ body{
         background: transparent;    
         cursor: pointer;
         border-radius: 5px;
+    }
+    button:hover{
+        background-color: black;
+        color: white;
     }
     input[type=radio]{
         color:red
