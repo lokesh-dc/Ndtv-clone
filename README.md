@@ -1,7 +1,12 @@
 # Ndtv-clone  <a href="https://loquacious-paletas-d45019.netlify.app/" > Deployed Link </a>
 
 Cloned a very well known NDTV.com website for daily news & updatees.
-#### Tech Stack : HTML | CSS | JavaScript 
+#### Tech Stack : 
+  * HTML 
+  * CSS 
+  * JavaScript 
+  
+  
 #### Features : 
 - SignUp/Login
 - Searching, Sorting & Filtering functionality
