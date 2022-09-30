@@ -10,6 +10,7 @@ Cloned a very well known NDTV.com website for daily news & updatees.
 #### Features : 
 - SignUp/Login
 - Searching, Sorting & Filtering functionality
+- Read Laater Section
 
 ### Landing-Page:
 ![ndtv-landing](https://user-images.githubusercontent.com/103635403/191074924-0a25c4b8-4c56-4295-bb17-0719b92463fc.png)
